@@ -5,14 +5,15 @@ provider "aws" {
 }
 
 resource "aws_db_instance" "caci_database" {
-  identifier = "caci_rds_instance"
+  identifier = "caci-rds-instance"
   engine = "mysql"
   instance_class = "db.t2.micro"
   allocated_storage = "20"
   storage_type = "gp2"
-  availability_zone = "eu-west-2"
   multi_az = true
   publicly_accessible = false
+  username             = "waqas"
+  password             = "caci1234"
 }
 
 
